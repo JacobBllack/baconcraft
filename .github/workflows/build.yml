@@ -18,21 +18,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Cache Gradle
-        uses: actions/cache@v4
+      # Install Gradle (no wrapper required)
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v2
         with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
-
-      - name: Build
-        run: ./gradlew --no-daemon --stacktrace build
+          gradle-version: 8.1.1
+          arguments: build
 
       - name: Upload mod jar
         uses: actions/upload-artifact@v4
