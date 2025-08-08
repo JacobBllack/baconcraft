@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+
+license="MIT"
+issueTrackerURL=""
+showAsResourcePack=false
+
+[[mods]]
+modId="baconcraft"
+version="1.0.0"
+displayName="BaconCraft"
+displayURL=""
+logoFile=""
+credits=""
+authors="You"
+description='''Adds bacon ore, bacon tools, and bacon armor.'''
+
+[[dependencies.baconcraft]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.baconcraft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
