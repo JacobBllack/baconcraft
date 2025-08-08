@@ -1,1 +1,11 @@
+pluginManagement {
+    repositories {
+        // Needed so Gradle can find ForgeGradle
+        maven { url = 'https://maven.minecraftforge.net' }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
 rootProject.name = 'baconcraft'
+
