@@ -1,5 +1,6 @@
 package com.example.baconcraft.registry;
 
+import net.minecraft.world.food.FoodProperties;
 import com.example.baconcraft.BaconCraft;
 import com.example.baconcraft.world.BaconArmorMaterial;
 import com.example.baconcraft.world.BaconToolTier;
